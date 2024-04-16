@@ -8,59 +8,103 @@
     <title>Promesse Seuglong</title>
 </head>
 <body>
-    
-   
     <div id="wrapper">
-        <nav class="navbar">
-            <a href="#">About Me</a>
-            <a href="#">Experience</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
-            <a href="#">Connect</a>
-            
+    
+    <header>
+        <!-- <a href="#" class="logo"><img src="image3.jpg"></a>  -->
+ <nav class="navbar">
+         <ul>
+         <li><a href="#about">About Me</a></li>
+        <li><a href="#experience" >Experience</a></li>
+        <li><a href="#skills" >Skills</a></li>
+        <li><a href="#project" >Projects</a></li>
+        <li><a href="#connect" >Connect</a></li>
+         </ul> 
         </nav>
+  </header>   
         
-        <div class="profile">
-<img src="profile.png" width="300" height="285"/>
-<div>
-<h3>Hello, I am</h3>
-<h1>Promesse Seuglong Fongba</h1>
-<h3>A College student, lifelong learner and an aspiring <b>Software Engineer</b></h3>
-</div>
-        </div>
-        <div class="about">
+        <section class="flex">
+                <div>
+                    <h3>Hello, I am</h3>
+            <h1>Promesse</h1>
+			<h2 class="name">Seuglong Fongba</h2>
+			<p>A college student, lifelong learner and emerging <b>Software Engineer</b> with a versatile skill set in technologies.</p>
+			<div class="button">
+			   <a href="#skills" class="btn">My Skills</a>
+			    <a href="#about" class="btn">About Me</a>
+				<a href="mailto:seuglongp@gmail.com" class="btn">Contact Me</a>
+			</div>
+                </div>
+                <div class="profile"><img src="image2.png" alt="profile"/>
+                 </div>
+                </section>
+        
+        <section class="about" id="about">
         <h2>About Me</h2>
-<p>I have always found inspiration in the quote, "life is like a roller coaster; it has its ups and downs, but it's your choice to scream or enjoy the ride." My life's journey has indeed resembled a roller coaster, shaped by my background and socioeconomic status. I was born in Cameroon, Africa, in a family with nine kids, and I'm the seventh. Now, I'm 30 years old, a mom to two kids (four and one-year-old), and I've been married since November 2017. Even though my family didn't have a lot of money when I was growing up, I never gave up on my dream of becoming a software engineer because I love working with technology. I recently moved to the United States, embarking on a new chapter of exploration and learning. <br>Family is super important to me, and I cherish every moment I spend with them. I also really enjoy being outside, whether it's taking a walk in the park or having a picnic on the weekends. So, as I start this new phase of my life, I'm looking forward to the new experiences and opportunities it brings. Beyond academics, I have a flair for cooking. I find it extremely satisfying to experiment with new recipes and techniques, often inspired by the cooking shows I love to watch. The art of preparing delicious meals truly captivates me.</p>
+        <div class="flex">
+        <div><img src="image3.jpg" alt="profile"/>
         </div>
-        <div class="experience">
-<h2>Experience</h2>
-<ul>
-    <li>Customer service representative, Tanza LLC</li>
-    <li>Upshifter (flexible gigs jobs), Upshift</li>
-</ul>
+<span>I have always found inspiration in the quote, "life is like a roller coaster; it has its ups and downs, but it's your choice to scream or enjoy the ride." My life's journey has indeed resembled a roller coaster, shaped by my background and socioeconomic status. I was born in Cameroon, Africa, in a family with nine kids, and I'm the seventh. Now, I'm 30 years old, a mom to two kids (four and one-year-old), and I've been married since November 2017. Even though my family didn't have a lot of money when I was growing up, I never gave up on my dream of becoming a software engineer because I love working with technology. I recently moved to the United States, embarking on a new chapter of exploration and learning. <br>Family is super important to me, and I cherish every moment I spend with them. I also really enjoy being outside, whether it's taking a walk in the park or having a picnic on the weekends. So, as I start this new phase of my life, I'm looking forward to the new experiences and opportunities it brings. Beyond academics, I have a flair for cooking. I find it extremely satisfying to experiment with new recipes and techniques, often inspired by the cooking shows I love to watch. The art of preparing delicious meals truly captivates me.</span>
         </div>
+        </section>
+        
        
-        <div class="skills">
+        <section  id="experience">
+            <h2>Experience</h2>
+            <div class="experience">
+<ul class="year">
+    <li class="list">Freelance</li>
+    <li class="list">Upshifter (flexible gigs jobs), Upshift</li>
+    <li class="list">Customer service representative, Tanza LLC</li>
+    <li class="list">Sales Associate, Afworld Network Service</li>
+</ul>
+<ul class="year">
+    <li class="list"> 2022-present</li>
+    <li class="list"> 2023-present</li>
+    <li class="list"> 2019-2021</li>
+    <li class="list"> 2015-2017</li> 
+</ul>
+        </section>
+    </div>      
+        
+        <section  id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>Multimedia: Adobe Illustrator, Canva, Adobe Photoshop, Premiere Pro, Audition, Express, MS Office</li>
-                <li>Languages: HTML5, CSS3, Javascript</li>
-                <li>Others skills: Bilingual(French/English), persistent, ambitous, team player</li>
-            </ul>
-        </div>
-        <div class="project">
+            <div class="skills skills_container container grid">
+                <article class="card">    
+                    <h3 >UI/UX Design</h3>
+                    <p>Adobe Illustrator, Canva, Adobe Photoshop</p> 
+                </article>
+                <article class="card">  
+                    <h3 >Software Engineering</h3>
+                    <p>HTML5, CSS3, Javascript, python, SQL</p> 
+                </article>
+                <article class="card"> 
+                    <h3 >Soft Skills</h3>
+                    <p>Bilingual(French/English), persistent, ambitous, team player, emphatetic</p> 
+                </article>
+            </div>
+        </section>
+      
+        <section  id="project">
             <h2>Projects</h2>
-            <ul>
-                <li>Multimedia: Adobe Illustrator, Canva, Adobe Photoshop, Premiere Pro, Audition, Express, MS Office</li>
-                <li>Languages: HTML5, CSS3, Javascript</li>
-                <li>Others skills: Bilingual(French/English), persistent, ambitous, team player</li>
-            </ul>
-        </div>
-        <div class="connect">
+            <div class="project">
+                <ul class="year">
+                    <li class="list">Portfolio website using Javscript, HTML5 and CSS3</li>
+                    <li class="list">Javajam Coffee Bar: HTML5, CSS3</li>
+                    <li class="list">Google clone page: CSS, HTML</li>
+                </ul>
+            </div>
+           
+        </section>
+       
+        <section  id="connect">
             <h2>Connect</h2>
-            <a href="https://github.com/PromesseFongba/Promesse-SeuglongFongba-Haumea-gitbasics" class="fa fa-github" ></a>
-                    </div>
+            <div class="connect"> <a href="https://github.com/PromesseFongba/Promesse-SeuglongFongba-Haumea-gitbasics" class="fa fa-github fa-4x" ></a></div>
+           
+        </section>
+    
     </div>
+
 
 </body>
 </html>
