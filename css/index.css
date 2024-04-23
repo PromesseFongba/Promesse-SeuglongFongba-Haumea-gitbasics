@@ -186,3 +186,47 @@ section{
     display: block;
     align-items: center;
   }
+
+/* For small devices */
+@media screen and (max-width: 480px) {
+    header {
+        position: static;  /* If the fixed header is problematic on small screens */
+    }
+    .profile img, .about img {
+        width: 100%;  /* Full-width images */
+        height: auto;
+    }
+    .flex {
+        flex-direction: column;  /* Stack items vertically */
+    }
+    .btn {
+        padding: 10px;  /* Larger buttons */
+        font-size: 0.9rem;
+    }
+    .section_subtitle {
+        font-size: 1.5rem;  /* Larger subtitles for visibility */
+    }
+}
+/* For medium devices */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .profile img, .about img {
+        width: 80%;  /* Slightly smaller images */
+    }
+    .flex {
+        flex-direction: row;  /* Maintain row direction */
+    }
+    nav ul li {
+        margin-right: 20px;  /* More spacing between navigation items */
+    }
+    .btn {
+        padding: 12px;  /* Slightly larger buttons */
+        font-size: 1rem;
+    }
+    .section_subtitle {
+        font-size: 2rem;
+    }
+}
+
+
+  
+  
