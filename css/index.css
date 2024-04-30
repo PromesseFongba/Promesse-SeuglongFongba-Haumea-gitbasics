@@ -1,23 +1,51 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
 
 body{
-    background-color:  #0e0609;
-    color: white;
+   
+    background-image: linear-gradient(to right, #fbe6ee, aliceblue);
+    color: black;
     font-family: Roboto, arial;
     margin: 0;   
 }
 #wrapper{
     width: 80%;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto; 
+    
+
+}
+#home{ 
+    background-image: linear-gradient(135deg, transparent 25%, #d7377a 25%, #d7377a 50%, transparent 50%, transparent 75%, #d7377a 75%, #d7377a);
+    background-size: 200%;
+    border-radius: 25px;
+    height: 85vh;
+}
+/* #home, #about, #experience, #project{
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+
+
+.profile {
+    width: 50%;
+    padding: 20px;
 }
 
+.profile img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 header{
     position: fixed;
     top:0;
     left:0;
     right: 0;
-    background:rgb(189, 7, 80);
+    /* background:rgb(189, 7, 80); */
+    background: black;
     box-shadow: 0 2px 8px rgb(84, 37, 53);
   } 
 nav {
@@ -40,10 +68,10 @@ nav ul li a {
  
 /* mouse over side navigation link */
 nav li a:hover{
-	color: black;
+    color: rgb(189, 7, 80);
 }
 b{
-color:pink;}
+color:rgb(230, 29, 62);}
 .flex{
     display: flex; 
   align-items: center; 
@@ -85,13 +113,13 @@ color:pink;}
 h1 {
     font-size: 5rem;;
     font-weight: 700;
-    color: white;
+    color: black;
     line-height: 1.1;
     margin: 0 0 8px;
 
 }
 p {
-    color: white;
+    color: black;
     font-size:1.5rem;
     line-height: 1.8;
     margin-bottom: 40px;
@@ -116,10 +144,11 @@ h2{
     text-align: center;
 }
 span{
-    color: #cbc9c9;
+    color: #292727;
 }
 section{
     padding-block: 5rem 1rem;
+    margin-bottom: 2rem;
 }
 
 .about{
@@ -145,31 +174,45 @@ section{
 .year{
     list-style: none;  
 }
-.connect{  
+.connect a {
     line-height: 34px;
-}
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .connect {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+  }
 
 .container {
     max-width: 1024px;
     margin-inline: 1.5rem;
+    
   }
   .grid {
     display: grid;
     gap: 1.5rem;
+    
   }
 .skills_container {
     justify-content: center;
     display: flex; 
-  padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  
   
   }
 .card {
-    box-shadow: 0 8px 20px white;
+    box-shadow: 0 8px 20px rgb(12, 12, 12);
     border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(177, 175, 175, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    background-color: #d7377a;
     color: white;
     margin: 15px;
     flex: 1; 
@@ -182,10 +225,16 @@ section{
     text-align: center;
     font-size: 2rem;
   }
-  .connect{
-    display: block;
-    align-items: center;
+  footer{
+    top:0;
+    left:0;
+    right: 0;
+    color: azure;
+    background: black;
+    position: relative;
+    text-align: center;
   }
+
 
 /* For small devices */
 @media screen and (max-width: 480px) {
@@ -206,6 +255,9 @@ section{
     .section_subtitle {
         font-size: 1.5rem;  /* Larger subtitles for visibility */
     }
+    .skills_container{
+        flex-direction: column;
+    }
 }
 /* For medium devices */
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -225,8 +277,7 @@ section{
     .section_subtitle {
         font-size: 2rem;
     }
+    .skills_container{
+        flex-direction: column;
+    }
 }
-
-
-  
-  
