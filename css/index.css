@@ -174,11 +174,18 @@ section{
 .year{
     list-style: none;  
 }
-.connect a{  
+.connect a {
     line-height: 34px;
     text-decoration: none;
     color: #000;
-}
+  }
+  
+  .connect {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+  }
 
 .container {
     max-width: 1024px;
