@@ -57,3 +57,29 @@ messageForm.addEventListener("submit", (e) => {
   messageList.appendChild(newMessage);
   messageForm.reset();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('https://api.github.com/users/PromesseFongba/repos')
+  .then(response => response.json())
+  .then(repositories => {
+      const projectSection = document.getElementById('project'); 
+      const projectList = projectSection.querySelector('.year'); 
+
+      for (let i = 0; i < repositories.length; i++) {
+          const project = document.createElement('li');
+          project.innerText = repositories[i].name;
+          project.className = 'list'; 
+          projectList.appendChild(project);
+      }
+  })
+  .catch(error => {
+      console.error('Failed to fetch repositories:', error);
+      alert('Failed to fetch repositories. Please check the console for more details.');
+  });
+});
+
+
+
+
