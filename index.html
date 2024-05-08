@@ -12,9 +12,11 @@
     <div id="wrapper">
     
     <header>
-        <!-- <a href="#" class="logo"><img src="image3.jpg"></a>  -->
+        
  <nav class="navbar">
-         <ul>
+    <a href="#" class="logo"><img src="portfolio.png"></a> 
+         <ul id="nav-links">
+            <img id="menu-icon" src="./menu_icon.svg" alt="Menu" />
             <li><a href="#home">Home</a></li>
          <li><a href="#about">About</a></li>
         <li><a href="#experience" >Experience</a></li>
@@ -41,9 +43,7 @@
         
         <section class="about" id="about">
         <h2  class="section_subtitle">About Me</h2>
-        <div class="flex">
-        <div><img src="image3.jpg" alt="profile"/>
-        </div>
+        <div>
 <span>I have always found inspiration in the quote, "life is like a roller coaster; it has its ups and downs, but it's your choice to scream or enjoy the ride." My life's journey has indeed resembled a roller coaster, shaped by my background and socioeconomic status. I was born in Cameroon, Africa, in a family with nine kids, and I'm the seventh. Now, I'm 30 years old, a mom to two kids (four and one-year-old), and I've been married since November 2017. Even though my family didn't have a lot of money when I was growing up, I never gave up on my dream of becoming a software engineer because I love working with technology. I recently moved to the United States, embarking on a new chapter of exploration and learning. <br>Family is super important to me, and I cherish every moment I spend with them. I also really enjoy being outside, whether it's taking a walk in the park or having a picnic on the weekends. So, as I start this new phase of my life, I'm looking forward to the new experiences and opportunities it brings. Beyond academics, I have a flair for cooking. I find it extremely satisfying to experiment with new recipes and techniques, often inspired by the cooking shows I love to watch. The art of preparing delicious meals truly captivates me.</span>
         </div>
         </section>
@@ -80,18 +80,7 @@
         <section  id="skills">
             <h2 class="section_subtitle">Skills</h2>
             <div class="skills skills_container container grid">
-                <!-- <article class="card">    
-                    <h3 >UI/UX Design</h3>
-                    <p>Adobe Illustrator, Canva, Adobe Photoshop</p> 
-                </article>
-                <article class="card">  
-                    <h3 >Software Engineering</h3>
-                    <p>HTML5, CSS3, Javascript, python, SQL</p> 
-                </article>
-                <article class="card"> 
-                    <h3 >Soft Skills</h3>
-                    <p>Bilingual(French/English), persistent, ambitous, team player, emphatetic</p> 
-                </article> -->
+               <!-- content for skills goes here -->
             </div>
         </section>
        
@@ -102,8 +91,23 @@
                         class="fa fa-github fa-4x"></a></div>
                 <div> <a href="https://twitter.com/seuglongp"
                         class="fa fa-twitter fa-4x"></a></div></div>
-
         </section>
+        <section  id="messageForm">
+            <h2 class="section_subtitle">Leave a Message</h2>
+                <form name="leave_message">
+                  <label for="usersName">Name</label>
+                  <input type="text" name="usersName" id="usersName" required />
+                  <label for="usersEmail">Email</label>
+                  <input type="email" name="usersEmail" id="usersEmail" required />
+                  <label for="usersMessage">Message</label>
+                  <textarea name="usersMessage" id="usersMessage" rows="2" required></textarea>
+                  <button type="submit">Submit</button>
+                </form>
+              </section>
+              <section id="messages">
+                <h2 class="section_subtitle">Messages</h2>
+                <ul></ul>
+              </section>
     
     </div>
     <script src="Js/index.js">

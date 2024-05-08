@@ -6,13 +6,15 @@ body{
     color: black;
     font-family: Roboto, arial;
     margin: 0;   
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
-#wrapper{
-    width: 80%;
+
+#wrapper {
+    max-width: 1200px; /* Max width for large screens, centers content on very large screens */
+    width: 100%; /* Ensures it takes full width on smaller screens */
     margin-left: auto;
     margin-right: auto; 
-    
-
 }
 #home{ 
     background-image: linear-gradient(135deg, transparent 25%, #d7377a 25%, #d7377a 50%, transparent 50%, transparent 75%, #d7377a 75%, #d7377a);
@@ -27,8 +29,6 @@ body{
     padding-right: 15px;
 } */
 
-
-
 .profile {
     width: 50%;
     padding: 20px;
@@ -39,6 +39,13 @@ body{
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.logo{
+    height: 85px;
+    width: 150px;
+    position: relative;
+    display: flex;
+    
+}
 header{
     position: fixed;
     top:0;
@@ -48,6 +55,11 @@ header{
     background: black;
     box-shadow: 0 2px 8px rgb(84, 37, 53);
   } 
+  .navbar{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
 nav {
     font-weight: bold;
     text-align: center;
@@ -70,6 +82,23 @@ nav ul li a {
 nav li a:hover{
     color: rgb(189, 7, 80);
 }
+#nav-links {
+    gap: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+  }
+  
+  /* 
+  This menu icon only becomes visible when on smaller screens.
+  The "display: none" property hides it by default
+  */
+  #menu-icon {
+    display: none;
+    width: 48px;
+    /* You can change the color of an image using filters */
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(30deg) brightness(119%) contrast(119%);
+  }
+  
 b{
 color:rgb(230, 29, 62);}
 .flex{
@@ -225,6 +254,102 @@ section{
     text-align: center;
     font-size: 2rem;
   }
+  /*FORM*/
+  #messageForm,
+#messages {
+  margin: auto;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#messageForm form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#messageForm label {
+  font-size: 0.9rem;
+  color: rgb(89, 89, 89);
+  margin-bottom: -0.5rem;
+}
+
+#messageForm input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #f476aa;
+  border-radius: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#messageForm button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #d7377a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#messageForm button:hover {
+  background-color: #f476aa;
+}
+
+h2 {
+  text-align: center;
+}
+
+#messages ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  list-style-type: none;
+}
+
+#messages li {
+  border: 1px solid #f476aa;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#messages li a {
+  width: 100%;
+}
+
+#messages li span {
+  margin-right: auto;
+}
+
+#messages li input {
+  border: 1px solid #d7377a;
+  background-color: rgb(253, 247, 250);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  margin-right: auto;
+}
+
+#messages li button {
+  padding: 0.3rem 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #d7377a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
   footer{
     top:0;
     left:0;
@@ -236,48 +361,60 @@ section{
   }
 
 
-/* For small devices */
-@media screen and (max-width: 480px) {
+
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 20px; /* Add padding on smaller screens */
+    }
+
+    h1, .section_subtitle {
+        font-size: 2rem; /* Adjust heading size on smaller screens */
+    }
+    
+
+    p, .btn, nav ul li a {
+        font-size: 1rem; /* Adjust text size for readability */
+    }
+
+    #home {
+        height: auto; /* Adjust height to be auto on smaller screens */
+    }
+
+    .profile, .about, .experience, .project {
+        padding: 20px; /* Add padding to these sections */
+        
+    }
+    #menu-icon {
+        display: block; /* Always show menu icon on smallest screens */
+        cursor: pointer; /* Make it clear it's clickable */
+    }
+}
+
+@media (max-width: 480px) {
     header {
-        position: static;  /* If the fixed header is problematic on small screens */
+        position: static; /* Fix header position issue on very small screens */
     }
-    .profile img, .about img {
-        width: 100%;  /* Full-width images */
-        height: auto;
+
+    #nav-links {
+        display: block; /* Ensure nav links are visible in a block format */
     }
-    .flex {
-        flex-direction: column;  /* Stack items vertically */
+
+    #menu-icon {
+        display: block; /* Always show menu icon on smallest screens */
+        cursor: pointer; /* Make it clear it's clickable */
     }
-    .btn {
-        padding: 10px;  /* Larger buttons */
-        font-size: 0.9rem;
+
+    .navbar a.logo {
+        margin-bottom: 20px; /* Add space below the logo when navbar is stacked */
     }
+
+    .button a, .btn {
+        padding: 15px 20px; /* Increase button size for easier clicking on touch devices */
+    }
+
     .section_subtitle {
-        font-size: 1.5rem;  /* Larger subtitles for visibility */
-    }
-    .skills_container{
-        flex-direction: column;
+        font-size: 1.5rem; /* Increase subtitle size for better readability */
     }
 }
-/* For medium devices */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .profile img, .about img {
-        width: 80%;  /* Slightly smaller images */
-    }
-    .flex {
-        flex-direction: row;  /* Maintain row direction */
-    }
-    nav ul li {
-        margin-right: 20px;  /* More spacing between navigation items */
-    }
-    .btn {
-        padding: 12px;  /* Slightly larger buttons */
-        font-size: 1rem;
-    }
-    .section_subtitle {
-        font-size: 2rem;
-    }
-    .skills_container{
-        flex-direction: column;
-    }
-}
+
