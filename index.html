@@ -13,67 +13,89 @@
     
     <header>
         
- <nav class="navbar">
+ <nav  id="desktop-nav">
     <a href="#" class="logo"><img src="portfolio.png"></a> 
-         <ul id="nav-links">
-            <img id="menu-icon" src="./menu_icon.svg" alt="Menu" />
+         <ul class="nav-links">
+    
             <li><a href="#home">Home</a></li>
          <li><a href="#about">About</a></li>
         <li><a href="#experience" >Experience</a></li>
-        <li><a href="#skills" >Skills</a></li>
         <li><a href="#project" >Projects</a></li>
+        <li><a href="#skills" >Skills</a></li>
         <li><a href="#connect" >Connect</a></li>
          </ul> 
         </nav>
-  </header>   
-        
+  
+  <nav id="hamburger-nav">
+    <div class="logo"><img src="portfolio.png"></div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>     
+      </div>
+      <div class="menu-links">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">skills</a></li>
+        <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+</header>       
+
         <section class="flex" id="home">
-                <div>
-                    <h3>Hello, I am</h3>
-            <h1>Promesse Fongba</h1>
+                <div class="section__text">       
+                    <h1> Promesse Fongba</h1>
             <h2 class="name">Frontend Developer</h2>
             <p>A college student, lifelong learner and emerging Software Engineer with a versatile skill set in technologies.</p>
             <div class="button">
                 <a href="mailto:seuglongp@gmail.com" class="btn">Contact Me</a>
             </div>
                 </div>
-                <div class="profile"><img src="image1.jpg" alt="profile"/>
-                 </div>
+                <div class="profile section__pic-container"> <img src="image1-resized.jpg" alt="Profile">
+                 </div>     
                 </section>
-        
+                <main>
         <section class="about" id="about">
         <h2  class="section_subtitle">About Me</h2>
-        <div>
-<span>I have always found inspiration in the quote, "life is like a roller coaster; it has its ups and downs, but it's your choice to scream or enjoy the ride." My life's journey has indeed resembled a roller coaster, shaped by my background and socioeconomic status. I was born in Cameroon, Africa, in a family with nine kids, and I'm the seventh. Now, I'm 30 years old, a mom to two kids (four and one-year-old), and I've been married since November 2017. Even though my family didn't have a lot of money when I was growing up, I never gave up on my dream of becoming a software engineer because I love working with technology. I recently moved to the United States, embarking on a new chapter of exploration and learning. <br>Family is super important to me, and I cherish every moment I spend with them. I also really enjoy being outside, whether it's taking a walk in the park or having a picnic on the weekends. So, as I start this new phase of my life, I'm looking forward to the new experiences and opportunities it brings. Beyond academics, I have a flair for cooking. I find it extremely satisfying to experiment with new recipes and techniques, often inspired by the cooking shows I love to watch. The art of preparing delicious meals truly captivates me.</span>
+        <div class="about-image"> <img src="about-image.png" alt="about">
+        </div> 
+        <div> 
+<p>Born in Cameroon as the seventh of nine siblings, my life has mirrored a roller coaster, full of ups and downs. Now 30, married since 2017, and a mother of two, I've embraced each phase, from dreaming in a humble home to moving to the U.S. and pursuing my passion as a software engineer. I cherish family moments outdoors and find joy in exploring culinary arts, inspired by my favorite cooking shows.</p>
         </div>
         </section>
         
        
-        <section  id="experience">
-            <h2 class="section_subtitle">Experience</h2>
-            <div class="experience">
-<ul class="year">
-    <li class="list">Freelance</li>
-    <li class="list">Upshifter (flexible gigs jobs), Upshift</li>
-    <li class="list">Customer service representative, Tanza LLC</li>
-    <li class="list">Sales Associate, Afworld Network Service</li>
-</ul>
-<ul class="year">
-    <li class="list"> 2022-present</li>
-    <li class="list"> 2023-present</li>
-    <li class="list"> 2019-2021</li>
-    <li class="list"> 2015-2017</li> 
-</ul>
-</div> 
-</section>
+        <section id="experience">
+          <h2 class="section_subtitle">Experience</h2>
+          <div class="experience">
+              <div class="experience-item">
+                  <span class="job-title">Freelance</span>
+                  <span class="job-duration">2022-present</span>
+              </div>
+              <div class="experience-item">
+                  <span class="job-title">Upshifter (flexible gigs jobs), Upshift</span>
+                  <span class="job-duration">2023-present</span>
+              </div>
+              <div class="experience-item">
+                  <span class="job-title">Customer service representative, Tanza LLC</span>
+                  <span class="job-duration">2019-2021</span>
+              </div>
+              <div class="experience-item">
+                  <span class="job-title">Sales Associate, Afworld Network Service</span>
+                  <span class="job-duration">2015-2017</span>
+              </div>
+          </div> 
+      </section>
       
         <section  id="project">
             <h2 class="section_subtitle">Projects</h2>
             <div class="project">
                 <ul class="year">
-                    <!-- <li class="list">Portfolio website using Javscript, HTML5 and CSS3</li>
-                    <li class="list">Javajam Coffee Bar: HTML5, CSS3</li>
-                    <li class="list">Google clone page: CSS, HTML</li> -->
+                     <!-- I used an API to fetch my projects from my git hub account -->
                 </ul>
             </div> 
         </section>
@@ -110,6 +132,7 @@
               </section>
     
     </div>
+  </main>
     <script src="Js/index.js">
     </script>
 </body>
